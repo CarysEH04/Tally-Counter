@@ -4,18 +4,20 @@ public class Piece {
     private String composer;
     private String book;
     private int barcode;
-    private int count = 0;
 
-    public Piece(String title, String composer, String book) {
-        barcode = count;
-        count += 1;
+    public Piece(int barcode, String title, String composer, String book) {
+        this.barcode = barcode;
         this.title = title;
         this.composer = composer;
         this.book = book;
     }
 
     public String toString() {
-        return 
+        return "(" + barcode + ") " + title + " - " + composer + "(" + book + ")";
+
     }
 
+    public static void main(String[] args) {
+
+    }
 }
